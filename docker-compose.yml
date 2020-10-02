@@ -1,0 +1,16 @@
+services:
+  db:
+    image: "postgres:latest"
+    container_name: "devopstpcompose"
+    environment:
+      POSTGRES_DB: "tp_devops"
+      POSTGRES_USER: "tp_devops"
+      POSTGRES_PASSWORD: "tp_devops"
+  app:
+    ports:
+      - "8080:8080"
+    image: "dockerfileimage:latest"
+    environment:
+      POSTGRES_URL: "db/tp_devops"
+      POSTGRES_USER: "tp_devops"
+      POSTGRES_PASSWORD: "tp_devops"
