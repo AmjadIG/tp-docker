@@ -13,7 +13,7 @@ jobs:
         name: Checkout
         uses: actions/checkout@v2
         with:
-           repository: "tp-docker"
+           repository: "AmjadIG/tp-docker"
       -
         name: Docker Setup QEMU
         uses: docker/setup-qemu-action@v1.0.1
