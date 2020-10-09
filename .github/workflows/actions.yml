@@ -31,7 +31,7 @@ jobs:
          name: Build and push Docker images
          uses: docker/build-push-action@v1.1.1
          with:
-           file: ../../docker/Dockerfile
+           file: ./../../docker/Dockerfile
            push: true
            tags: menoueramjad/tp-devops
       -
