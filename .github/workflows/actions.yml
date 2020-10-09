@@ -1,0 +1,15 @@
+name: deploy-image
+
+# Workflow when push action is requested
+on: push
+
+jobs:
+  automatic-deploy: Deploy automatically the image
+  runs-on: ubuntu-latest
+  
+  steps:
+    -
+    name: Set up QEMU
+    uses:
+    -
+    name: 
