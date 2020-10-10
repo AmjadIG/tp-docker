@@ -10,11 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
-        name: Checkout
-        uses: actions/checkout@v2
-        with:
-           repository: "AmjadIG/tp-docker"
-      -
         name: Docker Setup QEMU
         uses: docker/setup-qemu-action@v1.0.1
       -
@@ -27,13 +22,10 @@ jobs:
           username: ${{secrets.DOCKERHUB_USERNAME}}
           password: ${{secrets.DOCKERHUB_TOKEN}}
       -
-        name: Build and push Docker images
-        uses: docker/build-push-action@v1.1.1
-      -
          name: Build and push Docker images
          uses: docker/build-push-action@v1.1.1
          with:
-           context: .
+           context: /tp-docker/
            file: ./docker/Dockerfile
            push: true
            tags: menoueramjad/tp-devops
